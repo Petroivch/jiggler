@@ -21,8 +21,8 @@ internal sealed class WhatMouseForm : Form
     private readonly Timer timer;
     private bool running;
 
-    private const int IntervalMilliseconds = 30000;
-    private const int Pixels = 1;
+    private const int IntervalMilliseconds = 10000;
+    private const int Pixels = 10;
 
     private const uint ES_CONTINUOUS = 0x80000000;
     private const uint ES_SYSTEM_REQUIRED = 0x00000001;
@@ -81,7 +81,7 @@ internal sealed class WhatMouseForm : Form
     {
         running = true;
         toggleButton.Text = "Stop";
-        statusLabel.Text = "On: moving every 30 seconds";
+        statusLabel.Text = "On: moving every 10 seconds";
         KeepAwake();
         JiggleMouse();
         timer.Start();
